@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+    <h1 id="greeting"></h1>
+    <form action="" id="form">
+       <input type="number" id="timeInput" placeholder="Set Timer in Seconds">
+        <div id="timer"></div>
+        <p>What's your name?</p>
+        <input type="text" name="" id="name-input" placeholder="Type Name Here">
+        <input type="button" value="Enter name" onclick="enterName()">
+        <p>Choose your background colour</p>
+        <input type="color" id="bgColor" onchange="setColor()">
+        <p>Play music? - press Enter if checked yes to play</p>
+        <input type="checkbox" id="musicToggle">Music<audio id="bgMusic" src="music/564001__migfus20__jazz-background-music-loop.mp3" loop></audio>
+    </form>
     <div class="wrapper">
         <ul class="cards">
             <li class="card">

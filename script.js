@@ -4,6 +4,39 @@ let matchedCard = 0;
 let cardOne, cardTwo;
 let disableDeck = false;
 
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter") startTimer();
+});
+
+function startTimer() {
+  let t = document.getElementById("timeInput").value;
+  const out = document.getElementById("timer");
+  const i = setInterval(() => (out.textContent = t--, t < 0 && clearInterval(i)), 1000);
+}
+function enterName(){
+    let nameInput = document.querySelector("#name-input");
+    let n = nameInput.value;
+    let greetingText = document.querySelector("#greeting");
+    greetingText.innerHTML = "Good luck, " + n;
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter") setColor();
+});
+
+function setColor() {
+  document.body.style.backgroundColor = bgColor.value;
+}
+
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter") toggleMusic();
+});
+
+function toggleMusic() {
+  const m = document.getElementById("bgMusic");
+  document.getElementById("musicToggle").checked ? m.play() : m.pause();
+}
+
 function flipCard(e) {
     let clickedCard = e.target; //getting user clicked card
     if(clickedCard !== cardOne && !disableDeck) {
