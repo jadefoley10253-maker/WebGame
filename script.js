@@ -1,3 +1,5 @@
+//Youtube Tutorial by Coding Nepal - https://youtu.be/DABkhfsBAWw?si=WEDihNfFNf61O_x3
+
 const cards = document.querySelectorAll(".card");
 
 let matchedCard = 0;
